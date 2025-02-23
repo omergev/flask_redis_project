@@ -1,7 +1,12 @@
 from flask import Flask
-from routes import echo_at_time_bp, health_check_bp, fetch_and_print_messages
-from scheduler import start_scheduler
+from routes.routes import echo_at_time_bp, health_check_bp, fetch_and_print_messages
+from core.scheduler import start_scheduler
+
 import threading
+import sys
+import os
+
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 app = Flask(__name__)
 
