@@ -3,7 +3,7 @@ from datetime import datetime
 import uuid
 
 from flask import Blueprint, request, jsonify, Response
-from flask_redis_project.core.redis_client import ma_redis_client
+from core.redis_client import ma_redis_client
 
 echo_at_time_bp = Blueprint('echo_at_time', __name__)
 health_check_bp = Blueprint('health_check', __name__)
